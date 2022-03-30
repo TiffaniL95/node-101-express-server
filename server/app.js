@@ -10,19 +10,16 @@ const app = express();
 // add your routes and middleware below
 app.use(morgan('dev'))
 
-app.get('/data', function(req,res, next){
+app.get('/data', function(req,res){
     
     res.json(topSpotsData);
 
-    next();
 });
 
 
 app.get('/', function(req, res){
 
     res.status(200).send('hello');
-
-    next();
 
 });
 
